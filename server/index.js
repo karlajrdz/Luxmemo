@@ -9,17 +9,18 @@ import postRoutes from "./routes/posts.js";
 const app = express();
 //settin up  the starting path for the routes in postjs
 
-app.use('/posts', postRoutes);
+
 
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
+app.use('/posts', postRoutes);
 
 
 
 const CONNECTION_URL =
   "mongodb+srv://Karla:karla123@cluster0.qug8bcu.mongodb.net/?retryWrites=true&w=majority";
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 console.log('server running on port : ${PORT}')
 
 //connect database first a parameter and then a object with options
