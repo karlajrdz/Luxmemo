@@ -1,11 +1,15 @@
-import express from "express";
-//set up the router
-import { getPosts, createPost } from "../controllers/posts.js";
+import express from 'express';
+import {
+  getPosts,
+  createPost,
+  updatePost,
+  deletePost,
+} from "../controllers/posts.js";
 const router = express.Router();
-//call back function with a rquest and response
-router.get("/", getPosts);
-router.post("/", createPost);
-
-
+router.get('/', getPosts);
+router.post('/', createPost);
+router.patch('/:id', updatePost);
+router.delete('/:id', deletePost);
+router.patch('/:id/like Post',likePost);
 
 export default router;
