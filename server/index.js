@@ -19,7 +19,7 @@ app.use(cors());
 
 const CONNECTION_URL =
   "mongodb+srv://Karla:karla123@cluster0.qug8bcu.mongodb.net/?retryWrites=true&w=majority";
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 300;
 console.log('server running on port : ${PORT}')
 
 //connect database first a parameter and then a object with options
